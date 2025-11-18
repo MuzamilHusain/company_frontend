@@ -1,5 +1,18 @@
-[00:00:01.978] Server  LOG      ✓ Ready in 1516ms
-[00:00:07.166] Server  LOG      ○ Compiling / ...
-[00:00:09.351] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:30.856] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:31.366] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.683] Server  LOG      ✓ Ready in 1202ms
+[00:00:13.056] Server  LOG      ○ Compiling / ...
+[00:00:16.265] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:17.998] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:48.235] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:13.349] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:28.221] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: [object Error]). If you meant to render a collection of children, use an array instead.
+[00:07:49.033] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:52.984] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: [object Error]). If you meant to render a collection of children, use an array instead.
+[00:26:58.493] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:46.985] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: [object Error]). If you meant to render a collection of children, use an array instead.
+[00:48:10.574] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:10.971] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: [object Error]). If you meant to render a collection of children, use an array instead.
+[00:48:16.113] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:16.554] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: [object Error]). If you meant to render a collection of children, use an array instead.
+[00:51:40.899] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:02:10.824] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:54:17.285] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
