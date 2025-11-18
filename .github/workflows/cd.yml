@@ -12,28 +12,28 @@ jobs:
     runs-on: [self-hosted, Linux, X64, company_frontend]
 
     steps:
-      # 1️⃣ Checkout repository
+      #  Checkout repository
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Node.js 22
+      #  Setup Node.js 22
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      # 3️⃣ Install dependencies
+      #  Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # 4️⃣ Build Next.js project
+      #  Build Next.js project
       - name: Build Project
         run: npm run build
 
-      # 5️⃣ Start or restart app with PM2
-   #   - name: Start/Restart PM2 app
-   #     run: |
-    #      pm2 stop company-frontend || true
-     #     pm2 delete company-frontend || true
-      #    pm2 start npm --name company-frontend -- start
-      #    pm2 save
+      #  Start or restart app with PM2
+      - name: Start/Restart PM2 app
+        run: |
+           pm2 stop company-frontend || true
+           pm2 delete company-frontend || true
+           pm2 start npm --name company-frontend -- start
+           pm2 save
