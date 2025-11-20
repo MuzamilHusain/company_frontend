@@ -4,3 +4,7 @@ node_modules/
 # Build output
 dist/
 build/
+
+# Yml extra files
+cd.yml 
+ci.yml
