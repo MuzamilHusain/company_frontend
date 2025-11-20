@@ -2,11 +2,12 @@ name: Frontend CI/CD
 
 on:
   push:
-     - "feature/*"   # Early CI for child branches
-     - "main"        # CD on main branch
+    branches:
+      - "feature/*"   # CI for child branches
+      - "main"        # CD on main branch
   pull_request:
-    branches: [ "feature/*" ]  # CI only
-
+    branches:
+      - "feature/*"
 
 jobs:
 
@@ -17,16 +18,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 22
+
       - name: Install Dependencies
         run: npm ci
+
       - name: Lint Code
         run: npm run lint
+
       - name: Run Unit Tests
         run: npm run test -- --coverage
+
       - name: Build Project
         run: npm run build
 
@@ -36,21 +42,24 @@ jobs:
   cd:
     name: Deploy Production
     runs-on: [self-hosted, Linux, X64, company_frontend]
-    if: github.ref == 'refs/heads/main'   # <-- ensure CD only runs on main
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
       - uses: actions/checkout@v3
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 22
+
       - name: Install Dependencies
         run: npm ci
+
       - name: Build Project
         run: npm run build
+
       - name: Start/Restart PM2 app
         run: |
-           pm2 stop company-frontend || true
-           pm2 delete company-frontend || true
-           pm2 start npm --name company-frontend -- start
-           pm2 save
-    
+          pm2 stop company-frontend || true
+          pm2 delete company-frontend || true
+          pm2 start npm --name company-frontend -- start
+          pm2 save
