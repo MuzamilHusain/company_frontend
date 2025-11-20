@@ -42,7 +42,7 @@ jobs:
   cd:
     name: Deploy Production
     runs-on: [self-hosted, Linux, X64, company_frontend]
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
       - uses: actions/checkout@v3
 
